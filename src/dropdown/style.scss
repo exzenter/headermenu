@@ -1,0 +1,70 @@
+.header-dropdown-content {
+    /* Critical Overlay Positioning */
+    position: absolute;
+    top: calc(100% + var(--dropdown-offset-top, 0px));
+    left: 0;
+    z-index: 999;
+
+    /* Layout */
+    width: max-content;
+    max-width: var(--dropdown-max-width, 600px);
+    background: #fff;
+    /* Default, overridden by block supports */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Default shadow */
+
+    /* Visibility/Animation State */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition:
+        opacity var(--dropdown-anim-duration, 300ms) ease,
+        transform var(--dropdown-anim-duration, 300ms) cubic-bezier(0.4, 0, 0.2, 1),
+        visibility var(--dropdown-anim-duration, 300ms);
+
+    /* Open State */
+    &.is-open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    /* Positioning Variants (managed largely by view.js for precise fit, but defaults here) */
+    &[data-position-preference="center"] {
+        /* Placeholder for center logic if pure CSS desired, 
+           but view.js often handles this better for absolute overlays 
+           attached to relative parents in different contexts */
+        /* If pure CSS needed: 
+           left: 50%;
+           transform: translateX(-50%) translateY(-10px);
+           &.is-open { transform: translateX(-50%) translateY(0); }
+           */
+    }
+
+    &[data-position-preference="right"] {
+        left: auto;
+        right: 0;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-dropdown-content {
+        left: 0 !important;
+        right: 0 !important;
+        max-width: 90vw !important;
+        width: 90vw !important;
+        margin: 0 5vw;
+        /* Centered with margins */
+
+        /* Reset transform for mobile if needed */
+        transform: translateY(-10px) !important;
+
+        &.is-open {
+            transform: translateY(0) !important;
+        }
+    }
+}

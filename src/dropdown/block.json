@@ -1,0 +1,61 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "header-dropdown/content",
+    "version": "1.0.0",
+    "title": "Dropdown Content",
+    "category": "design",
+    "icon": "layout",
+    "description": "Container for dropdown content. Floats above content in frontend.",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "color": {
+            "background": true,
+            "text": true
+        },
+        "spacing": {
+            "padding": true,
+            "margin": true
+        },
+        "shadow": true
+    },
+    "attributes": {
+        "previewMode": {
+            "type": "boolean",
+            "default": false
+        },
+        "blockId": {
+            "type": "string",
+            "default": ""
+        },
+        "maxWidth": {
+            "type": "string",
+            "default": "600px"
+        },
+        "position": {
+            "type": "string",
+            "enum": [
+                "left",
+                "center",
+                "right"
+            ],
+            "default": "left"
+        },
+        "verticalOffset": {
+            "type": "string",
+            "default": "0px"
+        },
+        "animationDuration": {
+            "type": "number",
+            "default": 300
+        }
+    },
+    "textdomain": "header-dropdown-menu",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "style": "file:./style-frontend.css"
+}

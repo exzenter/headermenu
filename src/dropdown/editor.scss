@@ -1,0 +1,69 @@
+.header-dropdown-content-editor {
+    position: relative !important;
+    /* Critical for editing */
+    border: 2px dashed #e0e0e0;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #f9f9f9;
+    border-radius: 4px;
+
+    &.is-selected {
+        border-color: var(--wp-admin-theme-color, #007cba);
+        border-style: solid;
+    }
+
+    .editor-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        align-items: center;
+
+        .id-badge {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .preview-badge {
+            background: #d4edda;
+            color: #155724;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    }
+
+    /* Preview Mode - Overlay Simulation */
+    &.is-preview-mode {
+        position: absolute !important;
+        width: var(--dropdown-max-width, 600px);
+        background: #fff;
+        z-index: 9999;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        border: 1px solid #ddd;
+        border-style: solid;
+        margin: 0;
+        /* Reset margin for absolute positioning */
+
+        /* Positioning logic roughly matching frontend */
+        &[data-preview-position="center"] {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &[data-preview-position="right"] {
+            right: 0;
+            left: auto;
+            margin-left: auto;
+        }
+
+        &[data-preview-position="left"] {
+            left: 0;
+            right: auto;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "header-dropdown/trigger",
+    "version": "1.0.0",
+    "title": "Dropdown Trigger",
+    "category": "design",
+    "icon": "button",
+    "description": "A trigger link or button that toggles a dropdown menu.",
+    "supports": {
+        "html": false,
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "attributes": {
+        "triggerText": {
+            "type": "string",
+            "default": "Menu"
+        },
+        "dropdownId": {
+            "type": "string",
+            "default": ""
+        },
+        "hoverEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverDelay": {
+            "type": "number",
+            "default": 200
+        }
+    },
+    "textdomain": "header-dropdown-menu",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "style": "file:./style-frontend.css",
+    "viewScript": "file:./view.js"
+}

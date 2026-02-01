@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Build
+build
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.sublime-workspace

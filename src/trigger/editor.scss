@@ -1,0 +1,25 @@
+.wp-block-header-dropdown-trigger {
+    border: 1px dashed #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+
+    &.is-selected {
+        border-color: var(--wp-admin-theme-color, #007cba);
+        border-style: solid;
+    }
+
+    .trigger-id-badge {
+        font-size: 10px;
+        background: #eee;
+        padding: 2px 4px;
+        border-radius: 2px;
+        margin-left: 8px;
+        color: #666;
+        vertical-align: middle;
+
+        &.warning {
+            background: #ffe3e3;
+            color: #cc0000;
+        }
+    }
+}

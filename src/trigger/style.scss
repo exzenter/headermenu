@@ -1,0 +1,17 @@
+.header-dropdown-trigger {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	z-index: 1000;
+	
+	&__text {
+		display: inline-block;
+	}
+
+    // Interactive states
+    &:focus {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+}
