@@ -55,10 +55,13 @@
     .header-dropdown-content {
         left: 0 !important;
         right: 0 !important;
-        max-width: 90vw !important;
-        width: 90vw !important;
-        margin: 0 5vw;
-        /* Centered with margins */
+        width: 100vw;
+        padding-left: var(--wp--style--root--padding-left);
+        padding-right: var(--wp--style--root--padding-right);
+        /*   max-width: calc(100vw - 15px) !important;
+        width: calc(100vw - 15px) !important;
+        margin: 0 7.5px;
+       Centered with margins */
 
         /* Reset transform for mobile if needed */
         transform: translateY(-10px) !important;
