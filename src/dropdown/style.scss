@@ -10,7 +10,7 @@
     max-width: var(--dropdown-max-width, 600px);
     background: #fff;
     /* Default, overridden by block supports */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--dropdown-box-shadow, 0 10px 30px rgba(0, 0, 0, 0.1));
     /* Default shadow */
 
     /* Visibility/Animation State */
@@ -20,7 +20,7 @@
     pointer-events: none;
 
     transition:
-        opacity var(--dropdown-anim-duration, 300ms) ease,
+        opacity var(--dropdown-anim-duration, 300ms) var(--dropdown-anim-easing, ease),
         transform var(--dropdown-anim-duration, 300ms) cubic-bezier(0.4, 0, 0.2, 1),
         visibility var(--dropdown-anim-duration, 300ms);
 

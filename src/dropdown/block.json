@@ -52,6 +52,14 @@
         "animationDuration": {
             "type": "number",
             "default": 300
+        },
+        "animationEasing": {
+            "type": "string",
+            "default": "ease"
+        },
+        "boxShadow": {
+            "type": "string",
+            "default": "0 10px 30px rgba(0, 0, 0, 0.1)"
         }
     },
     "textdomain": "header-dropdown-menu",
